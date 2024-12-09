@@ -7,10 +7,8 @@ class Hero:
     def attack(self, other):
         other.health = max(0, other.health-self.attack_power)
     def is_alive(self):
-        if self.health > 0 :
-            return True
-        else:
-            return False
+        return self.health > 0 #True
+
     def info(self):
         print(f'{self.name},{self.health},{self.attack_power}')
 class Game:
